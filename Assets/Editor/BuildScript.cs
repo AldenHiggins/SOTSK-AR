@@ -6,7 +6,7 @@ public class BuildScript
 {
     static void Build()
     {
-        string[] scenes = { "Assets/GameFolder/Scenes/BaseSceneAR.unity", "Assets/GameFolder/Scenes/RoomLightMap.unity", "Assets/GameFolder/Scenes/FieldLevel1.unity" };
+        string[] scenes = { "Assets/GameFolder/Scenes/BaseSceneAR.unity" };
         BuildPipeline.BuildPlayer(scenes, "SOTSKBuild", BuildTarget.iOS, BuildOptions.None);
     }
 }
