@@ -6,6 +6,7 @@ using UnityEngine.XR.iOS;
 public class HitTestMoveCamera : MonoBehaviour
 {
     public Vector3 idealCameraPosition;
+    public GameObject scene;
 
 
     bool HitTestWithResultType(ARPoint point, ARHitTestResultType resultTypes)
@@ -17,6 +18,7 @@ public class HitTestMoveCamera : MonoBehaviour
             {
                 Debug.Log("Got hit!");
                 transform.position = (idealCameraPosition - transform.GetChild(0).position) / transform.localScale.x;
+                scene.SetActive(true);
                 //m_HitTransform.position = UnityARMatrixOps.GetPosition(hitResult.worldTransform);
                 //m_HitTransform.rotation = UnityARMatrixOps.GetRotation(hitResult.worldTransform);
                 //Debug.Log(string.Format("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
